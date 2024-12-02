@@ -1,0 +1,99 @@
+<div class="wrapper p-3 vh-100 dark-mode d-flex flex-column gap-4">
+  <div class="logo">
+    <img class="w-100 h-100" src="../../../assets/images/logo.webp" alt="" />
+  </div>
+  <div
+    class="icon dashboard"
+    [pTooltip]="All"
+    severity="secondary"
+    tooltipPosition="right"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      width="24"
+      height="24"
+      stroke-width="2"
+    >
+      <path
+        d="M5 4h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1"
+      ></path>
+      <path
+        d="M5 16h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1"
+      ></path>
+      <path
+        d="M15 12h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1"
+      ></path>
+      <path
+        d="M15 4h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1"
+      ></path>
+    </svg>
+  </div>
+  <ng-template #All>
+    <div class="d-flex align-items-center tooltipp">
+      <span>All</span>
+    </div>
+  </ng-template>
+  <div
+    class="icon completed"
+    [pTooltip]="completed"
+    severity="secondary"
+    tooltipPosition="right"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      width="24"
+      height="24"
+      stroke-width="2"
+    >
+      <path
+        d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8"
+      ></path>
+      <path d="M14 19l2 2l4 -4"></path>
+      <path d="M9 8h4"></path>
+      <path d="M9 12h2"></path>
+    </svg>
+  </div>
+  <ng-template #completed>
+    <div class="d-flex align-items-center tooltipp">
+      <span>Completed</span>
+    </div>
+  </ng-template>
+  <div
+    class="icon pending"
+    [pTooltip]="pending"
+    severity="secondary"
+    tooltipPosition="right"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      width="24"
+      height="24"
+      stroke-width="2"
+    >
+      <path d="M20.942 13.018a9 9 0 1 0 -7.909 7.922"></path>
+      <path d="M12 7v5l2 2"></path>
+      <path d="M17 17v5"></path>
+      <path d="M21 17v5"></path>
+    </svg>
+  </div>
+  <ng-template #pending>
+    <div class="d-flex align-items-center tooltipp">
+      <span>Pending</span>
+    </div>
+  </ng-template>
+</div>

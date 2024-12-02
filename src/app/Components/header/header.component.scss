@@ -1,0 +1,56 @@
+@import "../../Sass/variables";
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  button {
+    background: none;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 4px;
+    border-radius: 50%;
+  }
+  div {
+    p:nth-child(2) {
+      font-size: 0.8rem;
+    }
+    p:nth-child(1) {
+      font-weight: bold;
+    }
+    p{
+      span{
+        cursor: pointer;
+        color: #2ecc71;
+      }
+    }
+  }
+  a {
+    border: 1px solid #ddd;
+    padding: 4px;
+    border-radius: 50%;
+    svg {
+      stroke: black;
+    }
+  }
+  &.dark-mode {
+    background: $task-bg-dark-mode;
+    color: #fff;
+    a {
+      svg {
+        stroke: #fff;
+      }
+    }
+    button {
+      svg {
+        stroke: #fff;
+      }
+      img {
+        svg {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+}

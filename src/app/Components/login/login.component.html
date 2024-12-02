@@ -1,0 +1,18 @@
+<div class="login darkmode">
+  <form [formGroup]="loginForm" action="" class="d-flex flex-column justify-content-center darkmode">
+    <h5 class="text-center">login for an Account</h5>
+    <p class="text-center">Login Now. Don't have an account? <span [routerLink]="['/login']" (click)="toRegister()">Register here </span></p>
+    <div class="inputs d-flex flex-column gap-3">
+      <div class="email">
+        <label for="email">Email</label>
+        <input class="form-control" [class.error]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" type="email" id="email" placeholder="johndoe@gmail.com" formControlName="email"/>
+      </div>
+      <div class="password">
+        <label for="pass">Password</label>
+        <input class="form-control" [class.error]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" type="password" id="pass" placeholder="************" formControlName="password"/>
+      </div>
+      <button (click)="print()" [class.disabled]="loginForm.invalid" [disabled]="loginForm.invalid">Login Now</button>
+    </div>
+    <img src="../../../assets/images/flurry.png" alt="" class="w-100 h-100" draggable="false">
+  </form>
+</div>

@@ -1,0 +1,22 @@
+<div class="register darkmode">
+  <form [formGroup]="registerForm" action="" class="d-flex flex-column justify-content-center darkmode">
+    <h5 class="text-center">Register for an Account</h5>
+    <p class="text-center">Create an account. Already have an account? <span [routerLink]="['/register']" (click)="toLogin()" >Login here </span></p>
+    <div class="inputs d-flex flex-column gap-3">
+      <div class="name">
+        <label for="name">Full Name</label>
+        <input class="form-control" [class.error]="registerForm.get('fullName')?.invalid && registerForm.get('fullName')?.touched" type="text" id="name" placeholder="John Doe" formControlName="fullName"/>
+      </div>
+      <div class="email">
+        <label for="email">Email</label>
+        <input class="form-control" [class.error]="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" type="email" id="email" placeholder="johndoe@gmail.com" formControlName="email"/>
+      </div>
+      <div class="password">
+        <label for="pass">Password</label>
+        <input class="form-control" [class.error]="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" type="password" id="pass" placeholder="************" formControlName="password"/>
+      </div>
+      <button (click)="print()" [class.disabled]="registerForm.invalid" [disabled]="registerForm.invalid">Register Now</button>
+    </div>
+    <img src="../../../assets/images/flurry.png" alt="" class="w-100 h-100" draggable="false">
+  </form>
+</div>

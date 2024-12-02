@@ -1,0 +1,25 @@
+@import "../../Sass/variables";
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  .logo{
+    width: 25px;
+    height: 30px;
+  }
+  .icon{
+    cursor: pointer;
+  }
+
+  &.dark-mode{
+    background: $task-bg-dark-mode;
+    .icon{
+      svg{
+        stroke: #fff;
+      }
+    }
+  }
+}
+

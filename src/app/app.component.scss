@@ -1,0 +1,19 @@
+@import "../app/Sass/variables";
+
+.sidebar{
+  width: fit-content;
+}
+.all-wrapper{
+  display: flex;
+}
+.remian{
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  background: #e6e3ed;
+  height: calc(100vh - 60px);
+  position: relative;
+  &.darkmode{
+    background: $tasks-bg-dark-mode;
+  }
+}
